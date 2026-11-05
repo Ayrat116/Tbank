@@ -31,6 +31,7 @@ public class PriceFilter implements InstrumentFilter {
         if (!(instrument instanceof Stock stock)) {
             return false;
         }
+
         int comparison = stock.getDividendYield().compareTo(threshold);
         return switch (operator) {
             case GE -> comparison >= 0;
