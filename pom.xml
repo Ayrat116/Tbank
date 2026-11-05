@@ -35,4 +35,51 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <repositories>
+        <repository>
+            <id>proxy-maven-central</id>
+            <url>https://nexus.tcsbank.ru/repository/mvn-maven-proxy</url>
+        </repository>
+        <repository>
+            <id>processing-release</id>
+            <url>https://nexus.tcsbank.ru/repository/mvn_processing_release</url>
+        </repository>
+        <repository>
+            <id>confluent</id>
+            <url>https://nexus.tcsbank.ru/repository/mvn-confluent-proxy</url>
+        </repository>
+        <repository>
+            <id>maven-all</id>
+            <url>https://artifactory.tcsbank.ru/artifactory/maven-all</url>
+        </repository>
+        <repository>
+            <id>maven-proxy</id>
+            <url>https://artifactory.tcsbank.ru/artifactory/maven-proxy</url>
+        </repository>
+        <repository>
+            <id>bap-artifactory</id>
+            <url>https://artifactory.tcsbank.ru/artifactory/maven-releases-hosted/qa-bap</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>https://nexus.tcsbank.ru/repository/mvn-maven-proxy</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>processing-release</id>
+            <url>https://nexus.tcsbank.ru/repository/mvn_processing_release</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>maven-proxy</id>
+            <url>https://artifactory.tcsbank.ru/artifactory/maven-proxy</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>maven-all</id>
+            <url>https://artifactory.tcsbank.ru/artifactory/maven-all</url>
+        </pluginRepository>
+    </pluginRepositories>
+
 </project>
