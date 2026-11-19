@@ -8,6 +8,7 @@ import java.util.Map;
 
 import academy.backend.market_pulse.history.impl.PriceHistoryStoreSkeleton;
 import academy.backend.market_pulse.repository.store.impl.QuoteFileStoreSkeleton;
+import academy.backend.market_pulse.repository.store.impl.WatchlistStoreReference;
 import academy.backend.market_pulse.repository.store.impl.WatchlistStoreSkeleton;
 import academy.backend.market_pulse.stat.Stat;
 import academy.backend.market_pulse.stat.impl.AverageChangeStat;
@@ -72,7 +73,7 @@ public class AppConfig {
 
         // Watchlist переживает перезапуск CLI — читается при старте, дописывается на диск сразу
         // при изменении (см. WatchCommand).
-        this.watchlistStore = new WatchlistStoreSkeleton();
+        this.watchlistStore = new WatchlistStoreReference();
         this.watchlistPath = Path.of("data", "watchlist.json");
         this.watchlist = new Watchlist(watchlistStore.load(watchlistPath));
 
